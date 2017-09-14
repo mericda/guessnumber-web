@@ -38,7 +38,7 @@ get '/game/:guess' do
   elsif session[:counter] > 3 then
     "You run out of attempts. <b>/reset</b> to try again."
   else
-    "Sorry, it is not. #{secret}<br>#{session['counter']}<br>You have #{3-session['counter']}/attempts left."
+    "Sorry, it is not. #{secret}<br>#{session['counter']}<br>You have #{3-session['counter']} attempts left."
   end
 end
 get '/reset' do
