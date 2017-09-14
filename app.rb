@@ -18,6 +18,10 @@ get '/' do
   For example, if your guess is <b>1</b>, your url should be address.com/game/1<b>1</b>"
 end
 
+not_found do
+redirect '/'
+end
+
 
 get '/game/:guess' do
   session[:guess] = params[:guess]
