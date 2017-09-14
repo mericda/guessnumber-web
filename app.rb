@@ -33,10 +33,10 @@ get '/game/:guess' do
   # The program will check to see if the number matches.
   if (guess == secret) and (session[:counter] < 3) then
     # If it does, the player wins and they're congratulated
-    "That's right! It was #{guess}!"
+    "That's right! It was #{guess}! Type <b>/reset</b> to play again."
     # If it doesn't, they're offered another chance to guess the number
   elsif session[:counter] > 3 then
-    "You run out of attempts. <b>/reset</b> to try again."
+    "You run out of attempts. Type <b>/reset</b> to try again."
   else
     "Sorry, it is not. <br>You have #{3-session['counter']} attempts left."
   end
